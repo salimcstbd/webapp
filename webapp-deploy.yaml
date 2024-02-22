@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-color
+  labels:
+    app: webapp
+spec:
+  containers:
+  - name: webapp-color
+    image: asrafbd/webapp-color:v2
+    ports:
+    - containerPort: 8080
+    env:
+    - name: APP_COLOR
+      value: pink
